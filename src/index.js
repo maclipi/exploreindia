@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import HeaderDefault from './containers/headerDefault'
 import * as serviceWorker from './serviceWorker';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 
 
 ReactDOM.render(
 <Router history={hashHistory}>
-        <Route path='/' component={App} />
+        <Route exact path='/' component={App} />
+        <Route path="/head" component={HeaderDefault}></Route>
+
         
       </Router>
 , document.getElementById('root'));

@@ -9,6 +9,7 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import SearchBar from '../components/search'
 
 const styles = theme => ({
   root: {
@@ -74,26 +75,20 @@ function SearchAppBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed"  color="#2d2e4a">
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Material-UI
+            I N D I A
           </Typography>
           <div className={classes.grow} />
-          <div className={classes.search}>
+          <div className={classes.search} style={{width:"550px"}}>
             <div className={classes.searchIcon}>
-              <SearchIcon />
+              
             </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-            />
+            <SearchBar/>
           </div>
         </Toolbar>
       </AppBar>

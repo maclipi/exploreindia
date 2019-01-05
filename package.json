@@ -12,6 +12,7 @@
     "react-autosuggest": "^9.4.2",
     "react-dom": "^16.7.0",
     "react-inlinesvg": "^0.8.3",
+    "react-router": "^3.2.0",
     "react-scripts": "2.1.2"
   },
   "scripts": {
